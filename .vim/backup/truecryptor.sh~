@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# This will mount the truecrypt volume when in need of issuing certificates.
+
+
+HOME="/opt/OpenCA-0.9.2.5/var/crypto/keys"
+KEY="/media/truecrypt1/cakey.pem"
+CRYPT="/media/truecrypt1"
+
+#Mounting
+truecrypt --mount /dev/sda5 
+
+cd "$HOME"
+mv "$KEY" .
+chown openca:openca "$KEY"
+chmod og-rwx "$KEY"
+chmod u+rw "$KEY"
+
+echo "  Private Key in position, you have 5 Minutes to issue the certificate.
+        After time is out the key will be automatically moved back to the the
+        truecrypt volume and dismounted."
+
+
+# Dismounting (all volumes since no volume is specified)
+# Dismount after 5 minutes of use, to prevent forgetting to mount the truecrypt
+# volume.
+for ((i=5;i>=0;i-=1)); do
+    echo $i
+    sleep 1m
+    echo $i > /dev/ttyS1
+done
+
+mv "$KEY" "$CRYPT"
+truecrypt --dismount
+

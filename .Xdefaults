@@ -1,0 +1,359 @@
+xft.dpi:	                    96
+xft.antialias:                  true
+Xft.lcdfilter:                  lcdfilterlegacy
+Xft.hintstyle:                  hintfull
+
+! font
+XTerm*faceName:         Terminus
+XTerm*faceSize:         9
+XTerm*boldFont:         Terminus
+
+
+Xcursor.theme:                  Vanilla-DMZ-AA
+Xcursor.size:                   22
+
+!URxvt*font:                     -*-dina-medium-r-normal-*-13-*-*-*-*-*-*-*
+!URxvt*boldFont:                 -*-dina-bold-r-normal-*-13-*-*-*-*-*-*-*
+
+URxvt*font:                     xft:Terminus:pixelsize=12
+URxvt*boldFont:                 xft:Terminus:pixelsize=12
+
+!URxvt*font:                     xft:DejaVu Sans Mono:size=7:VL Gothic:size=7:
+
+!URxvt*geometry:                142x71
+URxvt*saveLines:                32767
+URxvt*scrollBar:	            false
+URxvt*scrollBar_right:	        true
+URxvt*loginShell:	            true
+!URxvt*borderLess:              true
+!URxvt*tintColor:                #FFFFFF
+URxvt*shading:                  30
+URxvt*termName:		            rxvt-unicode
+!URxvt*inheritPixmap:	        true
+URxvt*cutchars:		            "()*,<>[]{}|'
+URxvt*secondaryScroll:	        true
+URxvt*perl-lib:		            /usr/lib/URxvt/perl/
+URxvt*perl-ext-common:	        default,matcher
+URxvt*urlLauncher:	            opera.sh
+URxvt*matcher.button:	        1
+URxvt*matcher.pattern.1:        \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt*visualBell:	            true
+URxvt*keysym.C-u:               perl:matcher
+URxvt.tabbed.tabbar-fg:         8
+URxvt.tabbed.tabbar-bg:         0
+URxvt.tabbed.tab-fg:            7
+URxvt.tabbed.tab-bg:            0
+xterm*utf8:                     2
+
+*background:                    #121212
+*foreground:                    #B4B4B4
+
+! ---| thayer bright |--- {{{
+!black
+!*color0:                  #181c18
+!*color8:                  #555555
+!red
+!*color1:                  #ff3300
+!*color9:                  #ff6655
+!green
+!*color2:                  #75cc2b
+!*color10:                 #95ff58
+!yellow
+!*color3:                  #ffe975
+!*color11:                 #ffef9c
+!blue -> violet
+!*color4:                  #285577
+!*color12:                 #6677ff
+!magenta -> pink
+!*color5:                  #ce5c00
+!*color13:                 #f57900
+!cyan -> blue
+!*color6:                  #3399ff
+!*color14:                 #99ccff
+!white
+!*color7:                  #c4c4c4
+!*color15:                 #ffffff
+!}}}
+
+! ---| donri |--- {{{
+!URxvt*color0: #0a0a0a
+!URxvt*color1: #9e1828
+!URxvt*color2: #aece92
+!URxvt*color3: #968a38
+!URxvt*color4: #285577
+!URxvt*color5: #963c59
+!URxvt*color6: #418179
+!URxvt*color7: #bebebe
+!URxvt*color8: #666666
+!URxvt*color9: #cf6171
+!URxvt*color10: #c5f779
+!URxvt*color11: #fff796
+!URxvt*color12: #4186be
+!URxvt*color13: #cf9ebe
+!URxvt*color14: #71bebe
+!URxvt*color15: #ffffff
+!}}}
+
+! ---| toshi {{{
+!*color0: #333333
+!*color1: #ab383b
+!*color2: #5d8d5b
+!*color3: #F1BB32
+!*color4: #99CCFF
+!*color5: #666885 
+!*color6: #99CCFF
+!*color7: #d4d4d4
+!*color8: #585858
+!*color9: #8b5140
+!*color10: #5d8d5b
+!*color11: #b49457
+!*color12: #99CCFF
+!*color13: #887680
+!*color14: #9CC1C2
+!*color15: #e1e1e1
+!}}}
+
+! ---| MrElendig |--- {{{
+! black
+URxvt*color0:  #000000
+URxvt*color8:  #808080
+
+! red
+URxvt*color1:  #A36666
+URxvt*color9:  #D78787
+
+! green
+URxvt*color2:  #429942
+URxvt*color10: #87D787
+
+! yellow
+URxvt*color3:  #D7AF87
+URxvt*color11: #FFFFAF
+
+! blue
+URxvt*color4:  #AFAFD7 
+URxvt*color12: #AFD7FF
+
+! magenta
+URxvt*color5:  #A872A8 
+URxvt*color13: #D7AFD7 
+
+! cyan
+URxvt*color6:  #00A8AB
+URxvt*color14: #00C8CC
+
+! white
+URxvt*color7:  #D0D0D0
+URxvt*color15: #EFEFEF
+!}}}
+
+! ---| phrakture 2 |--- {{{
+!black
+!*color0:         rgb:19/19/19
+!*color8:         rgb:25/25/25
+!red
+!*color1:         rgb:80/32/32
+!*color9:         rgb:98/2b/2b
+!green
+!*color2:         rgb:5b/76/2f
+!*color10:        rgb:89/b8/3f
+!brown/yellow
+!*color3:         rgb:aa/99/43
+!*color11:        rgb:ef/ef/60
+!blue
+!*color4:         rgb:32/4c/80
+!*color12:        rgb:2b/4f/98
+!magenta
+!*color5:         rgb:70/6c/9a
+!*color13:        rgb:82/6a/b1
+!cyan
+!*color6:         rgb:92/b1/9e
+!*color14:        rgb:a1/cd/cd
+!white
+!*color7:         rgb:ff/ff/ff
+!*color15:        rgb:dd/dd/dd
+!}}}
+
+! ---| Colorful Obsolescence |--- {{{
+!Black	0,0,0	#000000	Preview
+!Black Bold	85,85,85	#555555	Preview
+!Red	238,60,60	#ee3c3c	Preview
+!Red Bold	255,85,85	#ff5555	Preview
+!Green	0,187,0	#00bb00	Preview
+!Green Bold	85,255,85	#55ff55	Preview
+!Yellow*	255,217,85	#ffd955	Preview
+!Yellow Bold	255,255,85	#ffff55	Preview
+!Blue	85,85,255	#5555ff	Preview
+!Blue Bold	0,142,209	#008ed1	Preview
+!Magenta	72,72,72	#484848	Preview
+!Magenta Bold	255,85,255	#ff55ff	Preview
+!Cyan	91,91,91	#5b5b5b	Preview
+!Cyan Bold*	0,255,255	#00ffff	Preview
+!White	187,187,187	#bbbbbb	Preview
+!White Bold	255,255,255	#ffffff	Preview
+!Default Foreground	187,187,187	#bbbbbb	Preview
+!Default Bold Foreground	255,255,255	#ffffff	Preview
+!Default Background	0,0,0	#000000	Preview
+!Default Bold Background	85,85,85	#555555	Preview
+!Cursor Text	0,0,0	#000000	Preview
+!Cursor Colour	255,255,255	#ffffff	Preview
+!*color0:				#000000
+!*color8:				#555555
+!*color1:				#EE3C3C
+!*color9:				#FF5555
+!*color2:				#00BB00
+!*color10:				#55FF55
+!*color3:				#FFD955
+!*color11:				#FFFF55
+!*color4:				#5555FF
+!*color12:				#008ED1
+!*color5:				#992299
+!*color13:				#FF55FF
+!*color6:				#00AAAA
+!*color14:				#00FFFF
+!*color7:				#BBBBBB
+!*color15:				#FFFFFF
+!}}}
+
+! ---| codemac old |--- {{{
+! Black (not tango) + DarkGrey
+!URxvt*color0:             #303430
+!URxvt*color8:             #8989A9
+! DarkRed + Red
+!URxvt*color1:             #bf7979
+!URxvt*color9:             #f4a45f
+! DarkGreen + Green
+!URxvt*color2:             #97b22b
+!URxvt*color10:            #c5f779
+! DarkYellow + Yellow
+!URxvt*color3:             #b6aa58
+!URxvt*color11:            #fff796
+! DarkBlue + Blue
+!URxvt*color4:             #86a2be
+!URxvt*color12:            #98afd9
+! DarkMangenta + Mangenta
+!URxvt*color5:             #d9b798
+!URxvt*color13:            #d7d998
+!DarkCyan + Cyan (both not tango)
+!URxvt*color6:             #a1d5cd
+!URxvt*color14:            #a1d5cd
+! LightGrey + White
+!URxvt*color7:             #cccccc
+!URxvt*color15:            #aeaeae
+!}}}
+
+! ---| thayer (tango) |--- {{{
+! Black (not tango) + DarkGrey
+!URxvt*color0:             #000000
+!URxvt*color8:             #555753
+! DarkRed + Red
+!URxvt*color1:             #ff6565
+!URxvt*color9:             #ff8d8d
+! DarkGreen + Green
+!URxvt*color2:             #93d44f
+!URxvt*color10:            #78e758
+! DarkYellow + Yellow
+!URxvt*color3:             #eab93d
+!URxvt*color11:            #ffc123
+! DarkBlue + Blue
+!URxvt*color4:             #204a87
+!URxvt*color12:            #3465a4
+! DarkMangenta + Mangenta
+!URxvt*color5:             #ce5c00
+!URxvt*color13:            #f57900
+!DarkCyan + Cyan (both not tango)
+!URxvt*color6:             #89b6e2
+!URxvt*color14:            #46a4ff
+! LightGrey + White
+!URxvt*color7:             #cccccc
+!URxvt*color15:            #ffffff
+!}}}
+
+! ---| phrakture |--- {{{
+!*foreground:       #bbbbbb
+!*background:       #000000
+!! Black + DarkGrey
+!*color0:            #000000
+!*color8:            #222222
+!! DarkRed + Red
+!*color1:            #803232
+!*color9:            #982b2b
+!! DarkGreen + Green
+!*color2:            #5b762f
+!*color10:           #89b83f
+!! DarkYellow + Yellow
+!*color3:            #aa9943
+!*color11:           #efef60
+!! DarkBlue + Blue
+!*color4:            #324c80
+!*color12:           #2b4f98
+!! DarkMangenta + Mangenta
+!*color5:            #706c9a
+!*color13:           #826ab1
+!!DarkCyan + Cyan
+!*color6:            #92b19e
+!*color14:           #a1cdcd
+!! LightGrey + White
+!*color7:            #ffffff
+!*color15:           #dededE
+!}}}
+
+
+
+! ---| xcalc |--- {{{
+xcalc*geometry: 210x275
+xcalc.ti.bevel.background: #111111
+xcalc.ti.bevel.screen.background: #000000
+xcalc.ti.bevel.screen.DEG.background: #000000
+xcalc.ti.bevel.screen.DEG.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.GRAD.background: #000000
+xcalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.RAD.background: #000000
+xcalc.ti.bevel.screen.RAD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.INV.background: #000000
+xcalc.ti.bevel.screen.INV.foreground: Red
+xcalc.ti.bevel.screen.LCD.background: #000000
+xcalc.ti.bevel.screen.LCD.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.LCD.shadowWidth: 0
+xcalc.ti.bevel.screen.M.background: #000000
+xcalc.ti.bevel.screen.M.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.P.background: #000000
+xcalc.ti.bevel.screen.P.foreground: Yellow
+xcalc.ti.Command.foreground: White
+xcalc.ti.Command.background: #777777
+xcalc.ti.button3.label: SQRT
+XCalc*ti.button3.font: -*-verdana-medium-r-normal--11-*-*-*-*-*-*-*
+xcalc.ti.button5.background: Orange3
+xcalc.ti.button19.background: #611161
+xcalc.ti.button18.background: #611161
+xcalc.ti.button20.background: #611111
+xcalc.ti.button25.background: #722222
+xcalc.ti.button30.background: #833333
+xcalc.ti.button35.background: #944444
+xcalc.ti.button40.background: #a55555
+xcalc.ti.button22.background: #222262
+xcalc.ti.button23.background: #222262
+xcalc.ti.button24.background: #222272
+xcalc.ti.button27.background: #333373
+xcalc.ti.button28.background: #333373
+xcalc.ti.button29.background: #333373
+xcalc.ti.button32.background: #444484
+xcalc.ti.button33.background: #444484
+xcalc.ti.button34.background: #444484
+xcalc.ti.button37.background: #555595
+xcalc.ti.button38.background: #555595
+xcalc.ti.button39.background: #555595
+XCalc*Cursor:                 hand2
+XCalc*ShapeStyle:             rectangle
+XCalc*Font: -*-verdana-medium-r-normal--11-*-*-*-*-*-*-*
+XCalc*bevel.screen.LCD.Font: -*-verdana-bold-r-normal--12-*-*-*-*-*-*-*
+!}}}
+
+! ---| xpdf |--- {{{
+xpdf*enableFreetype: yes
+xpdf*antialias: yes
+xpdf*foreground: black
+xpdf*background: white
+xpdf*urlCommand: firefox3 %s
+xpdf*viKeys: on
+!}}}

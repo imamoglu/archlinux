@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# install all neccessary packets
+
+# install all packets neccessary
+apt-get install openssl apache2 mysql-server libssl-dev make unzip libexpat1-dev libexpat1 linuxdoc-tools
+
+# perl modules for cpan:
+apt-get install libintl-perl libxml-twig-perl libcgi-session-perl libconvert-asn1-perl libdigest-sha1-perl libdigest-sha-perl libencode-perl libio-socket-ssl-perl libio-stringy-perl libmime-tools-perl libmime-lite-perl libmailtools-perl libnet-server-perl liburi-perl libxml-sax-perl 
+
+
+#EOF

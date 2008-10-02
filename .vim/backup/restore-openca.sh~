@@ -1,0 +1,98 @@
+#!/bin/bash 
+
+# Will restore all configuration files and setting required for for openCA
+# service.
+
+
+#1. check if neccessary packets are installed
+
+#2. install all cpan perl modules
+
+#3. Running this script as root
+
+#-------------------------------------------------------------------------------
+
+HOME="$(pwd)"
+CONF="$HOME/configs-openca-apache"
+OPENCA="/opt/OpenCA-0.9.2.5"
+
+# MySQL:
+
+echo "Configurating mysql..."
+
+# User openca cannot access shell through ssh or telnet..
+echo "/usr/sbin/nologin" >> /etc/shells
+useradd -s /sbin/nologin openca
+
+/etc/init.d/mysql start
+mysql -u root -p < mysql.sql
+cp "$CONF"/my.cnf /etc/mysql/
+/etc/init.d/mysql restart
+
+echo 
+echo "MySQL Done."
+echo -n Press Enter to continue ; read
+echo
+
+echo "Configurating apache2..."
+cd /
+tar -xvf "$CONF"/apache2-configs.tar
+a2ensite openca
+a2enmod ssl
+
+echo
+echo "Apache2 Done."
+echo -n Press Enter to continue ; read
+echo
+
+cd $HOME
+openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout cakey.pem -out cacert.pem
+mkdir /etc/apache2/ssl
+mv cacert.pem cakey.pem /etc/apache2/ssl
+
+echo
+echo "OpenSSL for Apache2 Done."
+echo -n Press Enter to continue ; read
+echo
+
+# OpenCA:
+echo "installing and setting up openCA..."
+cd /opt/
+#wget http://ftp.openca.org/openca/old/0.9.2/openca-0.9.2.5.tar.gz
+tar xvzf openca-0.9.2.5.tar.gz 
+
+cp "$CONF"/configure.openca_param "$OPENCA"
+
+cd "$OPENCA"
+./configure.openca_param
+make install-pub
+make install-ca
+
+cd /
+tar xvf $CONF/openca-configs.tar
+chown -R openca:openca "$OPENCA"
+cd "$OPENCA"
+
+echo
+echo "OpenCA Done."
+echo -n Press Enter to continue ; read
+echo
+# var/www:
+
+echo "Setting websites.."
+cd /
+tar xvf "$CONF"/www.tar 
+
+echo
+echo "Websites Done."
+echo -n Press Enter to continue ; read
+echo
+
+echo "---------------------------------------------------------"
+echo "All done.. default account for CA is root:ca"
+echo "Default account for mysql user openca:opencapw"
+echo "---------------------------------------------------------"
+
+echo "start apache2 and openca with:
+        /etc/init.d/apache2 start
+        /etc/init.d/openca start"

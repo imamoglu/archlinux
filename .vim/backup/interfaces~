@@ -1,0 +1,20 @@
+auto lo
+iface lo inet loopback
+
+
+iface eth0 inet static
+address 192.168.3.52
+netmask 255.255.255.0
+gateway 192.168.3.254
+
+auto eth0
+
+auto tap0
+iface tap0 inet manual
+up ifconfig $IFACE 0.0.0.0 up
+down ifconfig $IFACE down
+tunctl_user zaynaly
+
+auto br0
+iface br0 inet dhcp
+bridge_ports all tap0

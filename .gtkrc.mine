@@ -1,0 +1,7 @@
+gtk-icon-theme-name="Tango"
+gtk-font-name = "Tahoma 7.5"
+style "user-font"
+{
+        font_name = "Tahoma 7.5"
+}
+widget_class "*" style "user-font"
